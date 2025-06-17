@@ -1,1 +1,42 @@
 
+[LOGGING]
+LOG_LEVEL = "CRITICAL"
+LOG_DIR = "logs"
+
+[ACCESS_TOKEN_URL]
+URL="https://login.microsoftonline.com/1a407a2d-7675-4d17-8692-b3ac285306e4/oauth2/v2.0/token"
+
+[ACCESS_TOKEN_HEADERS]
+CLIENT_ID="5f5b15f1-b528-4149-84ea-f6b1d5af99ce"
+CLIENT_SECRET="2Rs8Q~T3SUcKT_hemlgPLAvkzSslnxyf4YjpkcWr"
+GRANT_TYPE="client_credentials"
+SCOPE="api://philips-rag-search-api-non-prod/.default"
+
+[LLM_API]
+URL="https://sb.api.itaap.philips.com/philips-rag-search-api/v1/search?index=windchillkb-index-064855"
+
+[LLM_API_REQ_BODY]
+input="" # will be appended with user input run time
+prompt="you are a talented prompter, please give us appropriate response based on my input"
+max_tokens=10000
+model_name="gpt-4o"
+
+[LLM_API_HEADERS]
+Authorization="" # Will be appended with bearer token runtime
+
+[TOKEN_URL_TIMEOUT]
+value = 20
+
+[LLM_API_TIMEOUT]
+value = 20
+
+[runner]
+magicEnabled = false  # Disables implicit state updates for better performance
+fastReruns = true  # Speeds up UI interactions
+
+[client]
+toolbarMode = "minimal"  # Hides Streamlit toolbar for a cleaner UI
+
+server.headless = true
+
+
