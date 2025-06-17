@@ -66,7 +66,7 @@ pip install -r requirements.txt
  Write-Host "Env Variable Setup, Starting Application..."
 Start-Sleep -Seconds 2
 
-#  Write-Host "Your app must be live on http://localhost:$Port/ in few seconds..."
+ Write-Host "Your app must be live on Port:$Port/ in few seconds..."
 
 # Start streamlit  and redirect stdout and stderr
 
